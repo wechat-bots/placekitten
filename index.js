@@ -1,3 +1,31 @@
-module.exports = function () {
-  return 'Hello, world';
+/* send me two numbers
+   get a random cat from placekitten
+ */
+exports = module.exports = function placekitten() {
+  return function placekitten(req, res, next) {
+    var message = req.weixin;
+    var content;
+
+    if (message.MsgType === 'text') {
+      content = message.Content;
+    }
+
+    var pattern = /(\d+)(?:\D+)(\d+)/;
+    var result = pattern.exec(content);
+
+    if (result) {
+      var width = result[1];
+      var height = result[2];
+      res.reply([
+        {
+          title: width + 'x' + height,
+          description: 'random picture from placekitten',
+          picurl: util.format('http://placekitten.com/%d/%d', width, height),
+          url: 'http://placekitten.com'
+        }
+      ]);
+    } else {
+      next();
+    }
+  };
 };
