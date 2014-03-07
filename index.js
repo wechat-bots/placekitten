@@ -1,6 +1,9 @@
 /* send me two numbers
    get a random cat from placekitten
  */
+
+var util = require('util');
+
 exports = module.exports = function placekitten() {
   return function placekitten(req, res, next) {
     var message = req.weixin;
