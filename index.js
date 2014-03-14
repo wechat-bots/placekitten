@@ -4,8 +4,8 @@
 
 var util = require('util');
 
-exports = module.exports = function placekitten() {
-  return function placekitten(req, res, next) {
+exports = module.exports = function createplacekitten() {
+  function placekitten(req, res, next) {
     var message = req.weixin;
     var content;
 
@@ -30,5 +30,7 @@ exports = module.exports = function placekitten() {
     } else {
       next();
     }
-  };
+  }
+  placekitten.help = 'type two number for a random kitten';
+  return placekitten;
 };
