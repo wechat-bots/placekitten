@@ -1,20 +1,24 @@
 {
   "name": "wechat-placekitten",
   "version": "0.0.1",
-  "description": "play wechat handler with placekitten",
+  "description": "return a random kitten in wechat",
   "main": "index.js",
   "scripts": {
     "test": "node_modules/.bin/grunt ci"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/rogerz/wechat-placekitten"
+    "url": "https://github.com/wechat-bots/placekitten"
   },
-  "keywords": ["wechat wechat-handler placekitten"],
+  "keywords": [
+    "wechat",
+    "wechat-bot",
+    "placekitten"
+  ],
   "author": "Rogerz Zhang <rogerz.zhang@gmail.com>",
   "license": "BSD-3-Clause",
   "bugs": {
-    "url": "https://github.com/rogerz/wechat-placekitten/issues"
+    "url": "https://github.com/wechat-bots/placekitten/issues"
   },
   "dependencies": {},
   "devDependencies": {
